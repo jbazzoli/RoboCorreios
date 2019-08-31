@@ -1,0 +1,56 @@
+﻿<html>
+<head>
+    <script src="~/Scripts/angular.min.js"> </script>
+    <script src="~/Scripts/app.js"> </script>
+    <script src="~/Scripts/bootstrap.min.js"> </script>
+    <script src="~/Scripts/jquery-3.0.0.min.js"> </script>
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div ng-app="myFrontCorreio" ng-controller="myCtrl">
+            <div class="form-group row">
+               <div class="col-xs-2">
+                   <form name="myForm">
+                       CEP: <input type="text" name="cep" ng-model="cep" class="form-control" >
+
+                       <button ng-click="pesquisar()" class="btn btn-default">Pesquisar</button>
+                    </form>
+             </div>
+                
+            </div>
+
+
+            <table class="table table-striped">
+
+                <tr>
+                    <th>
+                        Rua
+                    </th>
+                    <th>
+                        Bairro
+                    </th>
+                    <th>
+                        Cidade
+                    </th>
+                    <th>
+                        UF
+                    </th>
+                    <th>
+                        CEP
+                    </th>
+                </tr>
+                <tr>
+                    <td ng-repeat="x in endereco">
+                        {{ x }}
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+       
+    </div>
+
+</body>
+</html>
